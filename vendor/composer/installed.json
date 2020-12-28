@@ -59,11 +59,7 @@
                 "name": "Brent R. Matzelle"
             }
         ],
-        "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-        "support": {
-            "issues": "https://github.com/PHPMailer/PHPMailer/issues",
-            "source": "https://github.com/PHPMailer/PHPMailer/tree/master"
-        }
+        "description": "PHPMailer is a full-featured email creation and transfer class for PHP"
     },
     {
         "name": "rain/raintpl",
@@ -96,11 +92,7 @@
                 "homepage": "http://github.com/rainphp"
             }
         ],
-        "description": "easy and fast template engine",
-        "support": {
-            "issues": "https://github.com/rainphp/raintpl3/issues",
-            "source": "https://github.com/rainphp/raintpl3/tree/3.0.0"
-        }
+        "description": "easy and fast template engine"
     },
     {
         "name": "slim/slim",
@@ -145,10 +137,6 @@
             "microframework",
             "rest",
             "router"
-        ],
-        "support": {
-            "issues": "https://github.com/slimphp/Slim/issues",
-            "source": "https://github.com/slimphp/Slim/tree/2.0.0"
-        }
+        ]
     }
 ]

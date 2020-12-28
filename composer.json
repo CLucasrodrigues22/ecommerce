@@ -1,8 +1,9 @@
 {
     "name": "clucasrodrigues22/ecommerce",
+    "description": "Aplicação E-commerce usando MVC",
     "authors": [
         {
-            "name": "Lucas Rodrigues",
+            "name": "Hcode Treinamentos",
             "email": "c.lucasrodrigues22@gmail.com"
         }
     ],
@@ -13,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Hcode\\": "vendor\\hcodebr\\php-classes\\src"
+            "Hcode": "vendor\\hcodebr\\php-classes\\src"
         }
     }
 }
