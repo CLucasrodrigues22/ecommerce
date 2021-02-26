@@ -26,8 +26,8 @@ class Page
         $this->options = array_merge($this->defalts, $opts);
         // config
         $config = array(
-            "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"] . "/Ecommerce/views/",
-            "cache_dir"     => $_SERVER["DOCUMENT_ROOT"] . "/Ecommerce/views-cache/",
+            "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"] . "/ecommerce/views/",
+            "cache_dir"     => $_SERVER["DOCUMENT_ROOT"] . "/ecommerce/views-cache/",
             "debug"         => false
         );
 
