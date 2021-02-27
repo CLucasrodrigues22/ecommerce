@@ -14,23 +14,22 @@ class User extends Model
     {
         $sql = new Sql();
 
-        $result = $sql->select("SELECT * FROM tb_users WHERE deslogin = :usuario", array(
+        $results = $sql->select("SELECT * FROM tb_users WHERE deslogin = :usuario", array(
             ":usuario" => $usuario
         ));
 
-        if (count($result) === 0) 
-        {
+        if (count($results) === 0) {
             throw new \Exception("Usuário inexistente ou senha inválida");
         }
 
-        $data = $result[0];
+        $data = $results[0];
 
-        if (password_verify($senha, $data["despassword"]) == true) {
-            
+        if (password_verify($senha, $data["despassword"]) === true) {
+
             $user = new User();
-            
-            $user->setData($data);
 
+            $user->setData($data);
+            
             $_SESSION[User::SESSION] = $user->getValues();
 
             return $user;
@@ -43,19 +42,21 @@ class User extends Model
     public static function verifyLogin($inadmin = true)
     {
         if (
-                !isset($_SESSION[User::SESSION]) 
-                || 
-                $_SESSION[User::SESSION] 
-                || 
-                !(int)$_SESSION[User::SESSION]["iduser"] > 0 
-                || 
-                (bool)$_SESSION[User::SESSION]["inadmin"] !== $inadmin
+            !isset($_SESSION[User::SESSION])
+            ||
+            !$_SESSION[User::SESSION]
+            ||
+            !(int)$_SESSION[User::SESSION]["iduser"] > 0
+            ||
+            (bool)$_SESSION[User::SESSION]["inadmin"] != $inadmin
         ) {
-                header("Location: /admin/login");
-                exit;
-        } else {
-            header("Location: admin/inicio");
+            header("Location: /admin/login");
             exit;
         }
+    }
+
+    public static function logout()
+    {
+        $_SESSION[User::SESSION] = NULL;
     }
 }
