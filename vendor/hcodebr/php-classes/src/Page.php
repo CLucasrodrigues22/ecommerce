@@ -10,8 +10,8 @@ class Page
     private $tpl;
     private $options = [];
     private $defalts = [
-        "header"=>true,
-        "footer"=>true,
+        "header" => true,
+        "footer" => true,
         "data" => []
     ];
 
@@ -46,9 +46,7 @@ class Page
     public function setTpl($name, $data = array(), $returnHTML = false)
     {
         $this->setData($data);
-
         return $this->tpl->draw($name, $returnHTML);
-
     }
 
     //função para rederizar footer
@@ -57,4 +55,3 @@ class Page
         if ($this->options["footer"] === true) $this->tpl->draw("footer");
     }
 }
-
